@@ -13,12 +13,31 @@ const App = () => {
   const [taskStatus, setTaskStatus] = useState([]);
   const [resolvedTickets, setResolvedTickets] = useState([]);
 
+  
   useEffect(() => {
     fetch("/ticket.json")
       .then((res) => res.json())
       .then((data) => setTickets(data))
       .catch((err) => console.error("Error loading tickets:", err));
   }, []);
+
+  
+  useEffect(() => {
+    const savedTaskStatus = JSON.parse(localStorage.getItem("taskStatus")) || [];
+    const savedResolved = JSON.parse(localStorage.getItem("resolvedTickets")) || [];
+    setTaskStatus(savedTaskStatus);
+    setResolvedTickets(savedResolved);
+  }, []);
+
+  
+  useEffect(() => {
+    localStorage.setItem("taskStatus", JSON.stringify(taskStatus));
+  }, [taskStatus]);
+
+  
+  useEffect(() => {
+    localStorage.setItem("resolvedTickets", JSON.stringify(resolvedTickets));
+  }, [resolvedTickets]);
 
   const handleAddToTaskStatus = (ticket) => {
     const exists = taskStatus.find((t) => t.id === ticket.id);
@@ -38,9 +57,11 @@ const App = () => {
 
     toast.success(`${ticket.title} marked as Resolved`);
   };
+
   const deleteResolved = (id) => {
-  setResolvedTickets((prev) => prev.filter((ticket) => ticket.id !== id));
-};
+    setResolvedTickets((prev) => prev.filter((ticket) => ticket.id !== id));
+    toast.info("Resolved ticket deleted");
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
@@ -52,8 +73,7 @@ const App = () => {
       />
 
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto p-4 gap-6 flex-1">
-
-        {/* Left Side Tickets */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
           {tickets.map((ticket) => (
             <TicketCard
@@ -64,21 +84,14 @@ const App = () => {
           ))}
         </div>
 
-        {/* Right Side Panel */}
+        
         <div className="w-full md:w-1/3 bg-white border p-4 rounded-xl shadow space-y-6">
+          
+          <TaskStatus tasks={taskStatus} completeTask={handleCompleteTask} />
 
-          {/* Task Status */}
-          <TaskStatus
-            tasks={taskStatus}
-            completeTask={handleCompleteTask}
-          />
-
-          {/* Resolved Tickets */}
-          <ResolvedList resolvedTickets={resolvedTickets}
-          deleteResolved={deleteResolved} />
-
+         
+          <ResolvedList resolvedTickets={resolvedTickets} deleteResolved={deleteResolved} />
         </div>
-
       </div>
 
       <Footer />
