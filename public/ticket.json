@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "User cannot log in with correct credentials.",
+    "customer": "John Doe",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-25"
+  },
+  {
+    "id": 2,
+    "title": "Payment Failed",
+    "description": "Payment page not loading properly.",
+    "customer": "Jane Smith",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-24"
+  },
+  {
+    "id": 3,
+    "title": "Profile Update Error",
+    "description": "Unable to update profile details.",
+    "customer": "Alice Johnson",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-23"
+  },
+  {
+    "id": 4,
+    "title": "Password Reset Not Working",
+    "description": "Password reset email not received.",
+    "customer": "Bob Williams",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-22"
+  },
+  {
+    "id": 5,
+    "title": "App Crash on Launch",
+    "description": "App crashes immediately after opening.",
+    "customer": "Chris Evans",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-21"
+  },
+  {
+    "id": 6,
+    "title": "Notification Issue",
+    "description": "Push notifications not arriving.",
+    "customer": "Diana Prince",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": 7,
+    "title": "Slow Loading Dashboard",
+    "description": "Dashboard takes too long to load.",
+    "customer": "Ethan Hunt",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-19"
+  },
+  {
+    "id": 8,
+    "title": "Data Sync Failure",
+    "description": "Data not syncing across devices.",
+    "customer": "Fiona Gallagher",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-18"
+  },
+  {
+    "id": 9,
+    "title": "UI Glitch in Settings",
+    "description": "Buttons overlapping on settings page.",
+    "customer": "George Martin",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-17"
+  },
+  {
+    "id": 10,
+    "title": "Email Not Sending",
+    "description": "System emails not being sent.",
+    "customer": "Hannah Baker",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-16"
+  },
+  {
+    "id": 11,
+    "title": "Checkout Page Error",
+    "description": "Error appears during checkout process.",
+    "customer": "Ian Somerhalder",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-15"
+  },
+  {
+    "id": 12,
+    "title": "Cannot Upload Files",
+    "description": "File upload button not responding.",
+    "customer": "Jessica Alba",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-14"
+  },
+  {
+    "id": 13,
+    "title": "Search Not Working",
+    "description": "Search returns no results even when items exist.",
+    "customer": "Kevin Hart",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-13"
+  },
+  {
+    "id": 14,
+    "title": "App Logout Issue",
+    "description": "App logs out user unexpectedly.",
+    "customer": "Liam Neeson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-12"
+  },
+  {
+    "id": 15,
+    "title": "Incorrect Invoice Generated",
+    "description": "Invoice shows wrong amount.",
+    "customer": "Monica Geller",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-11"
+  },
+  {
+    "id": 16,
+    "title": "App Freezes on Payment",
+    "description": "App freezes when processing payment.",
+    "customer": "Nathan Drake",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-10"
+  },
+  {
+    "id": 17,
+    "title": "Broken Link in FAQ",
+    "description": "FAQ page contains broken links.",
+    "customer": "Olivia Benson",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-09"
+  },
+  {
+    "id": 18,
+    "title": "Unable to Change Theme",
+    "description": "Dark/light mode toggle not working.",
+    "customer": "Paul Walker",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-08"
+  },
+  {
+    "id": 19,
+    "title": "App Not Responding",
+    "description": "App becomes unresponsive intermittently.",
+    "customer": "Quentin Tarantino",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-07"
+  },
+  {
+    "id": 20,
+    "title": "Missing Profile Picture",
+    "description": "Profile pictures not displayed correctly.",
+    "customer": "Rachel Green",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-09-06"
+  },
+  {
+    "id": 21,
+    "title": "Error 404 on Blog",
+    "description": "Blog page shows 404 error.",
+    "customer": "Steve Rogers",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-05"
+  },
+  {
+    "id": 22,
+    "title": "Chat Not Sending Messages",
+    "description": "Messages not delivered in chat.",
+    "customer": "Tony Stark",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-04"
+  },
+  {
+    "id": 23,
+    "title": "Video Playback Error",
+    "description": "Videos fail to play on mobile devices.",
+    "customer": "Uma Thurman",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-03"
+  },
+  {
+    "id": 24,
+    "title": "Cannot Download Reports",
+    "description": "Reports download fails with error.",
+    "customer": "Victor Stone",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-09-02"
+  },
+  {
+    "id": 25,
+    "title": "Language Switch Not Working",
+    "description": "App language toggle fails to switch languages.",
+    "customer": "Wanda Maximoff",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-01"
+  },
+  {
+    "id": 26,
+    "title": "Subscription Renewal Failed",
+    "description": "Automatic renewal not processed.",
+    "customer": "Xander Cage",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-08-31"
+  },
+  {
+    "id": 27,
+    "title": "Error Saving Settings",
+    "description": "Settings changes not saved.",
+    "customer": "Yara Greyjoy",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-08-30"
+  },
+  {
+    "id": 28,
+    "title": "Push Notifications Delay",
+    "description": "Push notifications are delayed by several minutes.",
+    "customer": "Zoe Saldana",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-08-29"
+  },
+  {
+    "id": 29,
+    "title": "App Theme Reset",
+    "description": "App resets to default theme after restart.",
+    "customer": "Aaron Paul",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-08-28"
+  },
+  {
+    "id": 30,
+    "title": "Two-Factor Authentication Issue",
+    "description": "2FA codes not received via SMS.",
+    "customer": "Bella Swan",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-08-27"
+  }
+]
