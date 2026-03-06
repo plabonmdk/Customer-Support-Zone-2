@@ -1,6 +1,16 @@
 import React from "react";
 
 const TaskStatus = ({ tasks, completeTask }) => {
+  const handleComplete = (task) => {
+    completeTask(task);
+
+    // Local Storage আপডেট (extra safeguard)
+    const updatedTasks = tasks.filter((t) => t.id !== task.id);
+    localStorage.setItem("taskStatus", JSON.stringify(updatedTasks));
+
+    // নতুন রেজলভড টিকেট App.js এ already Local Storage এ সেভ হচ্ছে
+  };
+
   return (
     <div>
       <h2 className="font-bold text-xl mb-4">Task Status</h2>
@@ -14,7 +24,7 @@ const TaskStatus = ({ tasks, completeTask }) => {
           >
             <span>{task.title}</span>
             <button
-              onClick={() => completeTask(task)}
+              onClick={() => handleComplete(task)}
               className="bg-green-500 text-white px-2 py-1 rounded"
             >
               Complete
