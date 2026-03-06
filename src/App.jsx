@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import TicketCard from "./components/TicketCard";
 import TaskStatus from "./components/TaskStatus";
+import ResolvedList from "./components/ResolvedList";
 import Footer from "./components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -37,9 +38,12 @@ const App = () => {
 
     toast.success(`${ticket.title} marked as Resolved`);
   };
+  const deleteResolved = (id) => {
+  setResolvedTickets((prev) => prev.filter((ticket) => ticket.id !== id));
+};
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <Navbar />
 
       <Banner
@@ -47,9 +51,9 @@ const App = () => {
         resolvedCount={resolvedTickets.length}
       />
 
-      <div className="flex flex-col md:flex-row max-w-6xl mx-auto p-4 gap-4">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto p-4 gap-6 flex-1">
 
-        
+        {/* Left Side Tickets */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
           {tickets.map((ticket) => (
             <TicketCard
@@ -60,12 +64,19 @@ const App = () => {
           ))}
         </div>
 
-       
-        <div className="w-full md:w-1/3 border p-4 rounded shadow">
+        {/* Right Side Panel */}
+        <div className="w-full md:w-1/3 bg-white border p-4 rounded-xl shadow space-y-6">
+
+          {/* Task Status */}
           <TaskStatus
             tasks={taskStatus}
             completeTask={handleCompleteTask}
           />
+
+          {/* Resolved Tickets */}
+          <ResolvedList resolvedTickets={resolvedTickets}
+          deleteResolved={deleteResolved} />
+
         </div>
 
       </div>
