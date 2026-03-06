@@ -1,6 +1,15 @@
 import React from "react";
 
 const ResolvedList = ({ resolvedTickets = [], deleteResolved }) => {
+ 
+  const handleDelete = (id) => {
+    deleteResolved(id);
+
+    
+    const updatedResolved = resolvedTickets.filter((ticket) => ticket.id !== id);
+    localStorage.setItem("resolvedTickets", JSON.stringify(updatedResolved));
+  };
+
   return (
     <div className="bg-white p-5 rounded-xl shadow">
       <h2 className="text-xl font-bold mb-4 text-[#422AD5]">
@@ -24,7 +33,7 @@ const ResolvedList = ({ resolvedTickets = [], deleteResolved }) => {
               </div>
 
               <button
-                onClick={() => deleteResolved(ticket.id)}
+                onClick={() => handleDelete(ticket.id)}
                 className="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600"
               >
                 Delete
