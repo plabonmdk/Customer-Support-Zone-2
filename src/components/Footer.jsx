@@ -4,7 +4,13 @@ const Footer = () => {
   return (
     <footer className="bg-base-200 text-base-content border-t border-base-300">
       <div className="max-w-7xl mx-auto px-10 py-10 grid md:grid-cols-4 gap-10">
-      
+      <div>
+        
+        <h1 className="text-2xl font-bold">
+          CS — Ticket System
+        </h1>
+
+      </div>
         <div>
           <h6 className="font-bold text-lg mb-4">Services</h6>
           <ul className="space-y-2">
